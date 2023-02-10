@@ -1,4 +1,7 @@
-\documentclass[10pt,oneside]{article} 
+% docker pull narf/latex
+% docker run -i narf/latex < cv.tex > cv.pdf
+
+\documentclass[10pt,oneside]{article}
 \usepackage{fullpage}
 \usepackage[paper=letterpaper]{geometry} 
 \textheight=10.0in
@@ -25,24 +28,11 @@
 
 \begin{document}
 \bigname{\name}
-{\small \addr; Ph: \phone\hfill\email}
+{\small \addr; Ph#: \phone\hfill\email}
 \vspace{0pt}
 \rule[3mm]{\textwidth}{1pt}
 
 \vspace{-10 pt}
-%{\flushleft {\large \textbf{Objective}}}
-%\vspace{-5 pt}
-%	\begin{itemize}
-%		\item  Seeking a full-time position in an industry leading human-computer interaction research lab.
-%	\end{itemize}
-
-
-
-%{\flushleft{\large \textbf{Research Interests}}}
-  
-%  \begin{itemize}
-%   \item Multitouch and Multimodal Interaction Design, Gesture Recognition, Human-Computer Interaction, Information Semantics and Information Visualization.
-%  \end{itemize}
 
 {\flushleft{\large \textbf{Summary}}}
 
@@ -50,44 +40,47 @@
 
   \begin{itemize}
     %\setlength\itemsep{-3 pt}
-    \item \textbf{Experience:} Worked with distributed systems at scale in the Compute team at Netflix.
-    \item \textbf{Interests:} Distributed Systems, Platforms and OS
+      \item Distributed systems engineer with 10 years experience working on platform teams.
+      Self driven and passionate about delivering value to customers, worked with internal and external customers at Amazon and Netflix.
+      Experienced with leading adoption for new platforms.
   \end{itemize}
 
-
-
-
+{\flushleft{\large \textbf{Skills}}}
+   \begin{itemize}
+       \item Golang, Java, Python, AWS, Docker, Kubernetes, CI/CD tools.
+   \end{itemize}
 {\flushleft{\large \textbf{Work Experience}}}
 \begin{itemize}
       \item
-      \subheader{Netflix}, Los Gatos, CA\hfill July 2018 $-$ Present\\
-      Sr Software Engineer, Titus team(Container platform)
+      \subheader{Netflix}, Los Gatos, CA\hfill Jul 2018 $-$ Present\\
+      Sr Software Engineer - Compute Platform
       \vspace{-4 pt}
       \begin{itemize}
-        \item Work on building and maintaining the container platform using mesos on Amazon EC2.
-        \item Work on docker registry. 
+            \item Building and maintaining the control plane for container platform at Netflix using mesos/kubernetes on Amazon EC2.
+            \item Designed and built the titus job activity history service which showed the event history for a job(creation/modification aka scaling/deletion)
+            \item Built a docker image metadata cache from the docker registry
+        %\item  Data platform experience
+        %    \item Worked on federated graphql API
       \end{itemize}
   
       \item
-      \subheader{Mesosphere}, San Francisco, CA\hfill Sept 2016 $-$ July 2018\\
+      \subheader{Mesosphere}, San Francisco, CA\hfill Sept 2016 $-$ Jul 2018\\
       Software Developer, Cluster operations
       \vspace{-4 pt}
       \begin{itemize}
         \item Worked on making container orchestration cluster upgrades seamless.
-	\item Worked on building DC/OS(Mesos) services such as cluster and node checks and dcos licensing.
-        \item Contributing to open source everyday, https://github.com/amitaekbote.
+	    \item Worked on building DC/OS(Mesos) services such as cluster and node checks and dcos licensing.
       \end{itemize}
       
     \item	
-      \subheader{Amazon Web Services}, Cupertino, CA\hfill Aug 2013 $-$ Present\\
+      \subheader{Amazon Web Services}, Cupertino, CA\hfill Aug 2013 $-$ Aug 2016\\
       Software Developer, EC2
       \vspace{-4 pt}
       \begin{itemize}
         \item Added support for new linux kernels for the EC2 VM Import/Export service.
         \item Expand the service to newer regions and automate deployments.
 		\item Lead the effort to reduce operations pain and focus on providing a better customer experience.
-        \item Specialized in debugging customer images which failed on boot.
-        \item Worked with the kernel and operating systems team on next generation EC2 architecture. 
+        % \item Worked with the kernel and operating systems team on next generation EC2 architecture.
       \end{itemize} 
 
     \item
@@ -95,12 +88,11 @@
       Software Developer
       \vspace{-4 pt}
       \begin{itemize}
-        \item Added mux buffers to linecards, for multiplexing traffic between redundant supervisors.
-        \item Augmented Cisco IOS for linecard bringup on the Catalyst 4500\textsuperscript{\textregistered} 32 port switch.
-        \item Bringup and traffic testing of VSS (Virtual Switching System) on single supervisor switches,
-        \item Integrated PCIe OIR (Online Insertion and Removal) for a linecard.
-        \item Troubleshooting process and interrupt handling for Cisco switches.
-      \end{itemize} 
+        % \item Added mux buffers to linecards, for multiplexing traffic between redundant supervisors.
+        % \item Bringup and traffic testing of VSS (Virtual Switching System) on single supervisor switches,
+        % \item Integrated PCIe OIR (Online Insertion and Removal) for a linecard.
+          \item Worked on Catalyst 4500\textsuperscript{\textregistered} 32 port switch linecards and VSS.
+      \end{itemize}
 
     \item
       \subheader{BITS Networked Systems Laboratory}, Chicago, IL\hfill May 2009 $-$ May 2010\\
@@ -109,18 +101,17 @@
       \vspace{-4 pt}
 	    \begin{itemize}
         \item Optimized long range wireless throughput by developing a new rate adaptation algorithm.
-        \item Thesis was developed while working on the project \emph{Xenonets:Networks of cooperating strangers}.
-        \item Click Modular router installation and traffic testing using Ubiquiti routers with openwrt firmware. (C++)
-      \end{itemize}  
-
-    \item
-      \subheader{National Center for Data Mining}, Chicago, IL\hfill Aug 2008 $-$ Aug 2009
-      Research Assistant, University of Illinois at Chicago 
-      Mentor: Dr. David Hanley
-      \vspace{-4 pt}
-      \begin{itemize}
-        \item Developed modules for Cistrack system, a lightweight laboratory information management system (LIMS).
+        % \item Thesis was developed while working on the project \emph{Xenonets:Networks of cooperating strangers}.
       \end{itemize}
+
+%    \item
+%      \subheader{National Center for Data Mining}, Chicago, IL\hfill Aug 2008 $-$ Aug 2009
+%      Research Assistant, University of Illinois at Chicago
+%      Mentor: Dr. David Hanley
+%      \vspace{-4 pt}
+%      \begin{itemize}
+%        \item Developed modules for Cistrack system, a lightweight laboratory information management system (LIMS).
+%      \end{itemize}
 
     \item
       \subheader{Motorola}, Schlaumburg, IL\hfill May 2008 $-$ Aug 2008\\
@@ -144,21 +135,6 @@
   \end{itemize}
 %\vspace{6 pt}
 
-
-%% {\flushleft {\large \textbf{Skills}}}
-%%   \begin{itemize}
-%%     \item \textbf{Languages:} C, C$++$, Ruby\textit{[Expert]}
-%%     \item \textbf{Developer Essentials:} Emacs, Vim, Git, Shell. \textit{[Proficient]} 
-%%   \end{itemize}
-%\vspace{6 pt}
-
-
-%{\flushleft {\large \textbf{Projects}}}
-%\begin{condensed_items}
-%\item Keyword based categorization of Research Articles.
-%\item Supporting citation chaining through metadata extraction and visualization of research articles from the ACM Portal.
-%\end{condensed_items}
-%\vspace{6 pt}
 
 {\flushleft {\large \textbf{Professional Activities}}
   \begin{itemize}
