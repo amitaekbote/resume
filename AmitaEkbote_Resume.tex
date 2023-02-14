@@ -1,6 +1,7 @@
 % docker pull narf/latex
 % docker run -i narf/latex < cv.tex > cv.pdf
 
+
 \documentclass[10pt,oneside]{article}
 \usepackage{fullpage}
 \usepackage[paper=letterpaper]{geometry} 
@@ -9,9 +10,11 @@
 \raggedbottom 
 % \usepackage{minion}
 
-\usepackage{tgpagella}
-% \usepackage{venturis2}
-\usepackage[T1]{fontenc}
+%\usepackage{tgpagella}
+%\usepackage{venturis2}
+\usepackage{opensans}
+%\usepackage[T1]{fontenc}
+
 
 %\addtolength{\topmargin }{-30pt}
 %\addtolength{\textheight}{10pt} 
@@ -34,47 +37,55 @@
 
 \vspace{-10 pt}
 
-{\flushleft{\large \textbf{Summary}}}
+{\flushleft{\subheader{Summary}}}
+    \vspace{-4 pt}
+   \begin{itemize}
 
-%% Seeking a challenging full time position in systems software where my skill set is valued, while giving me an opportunity to explore.
+    \item Distributed systems engineer with 10 years experience delivering self-serve infrastructure platforms.
+     Passionate about delivering value to customers and finding the right intersection of customer and business needs.
+    Proven track record of strong collaboration with cross org teams to deliver results.
+    Experience with being on call for tier 1 services on AWS.
+    \end{itemize}
 
-  \begin{itemize}
+ % \begin{itemize}
     %\setlength\itemsep{-3 pt}
-      \item Distributed systems engineer with 10 years experience working on platform teams.
-      Self driven and passionate about delivering value to customers, worked with internal and external customers at Amazon and Netflix.
-      Experienced with leading adoption for new platforms.
-  \end{itemize}
+  %    \item Distributed systems engineer with 10 years experience delivering self-serve infrastructure platforms.
+  %    \item  value to internal and external customers at Amazon and Netflix.
+  %    Experienced with leading adoption for new platforms.zz
+  % \end{itemize}
 
-{\flushleft{\large \textbf{Skills}}}
+{\flushleft{\subheader{Skills}} %\textbf{Skills}}}
+      \vspace{-4 pt}
+
    \begin{itemize}
        \item Golang, Java, Python, AWS, Docker, Kubernetes, CI/CD tools.
    \end{itemize}
-{\flushleft{\large \textbf{Work Experience}}}
+
+{\flushleft{\subheader{Experience}} %\textbf{Work Experience}}}
 \begin{itemize}
       \item
-      \subheader{Netflix}, Los Gatos, CA\hfill Jul 2018 $-$ Present\\
-      Sr Software Engineer - Compute Platform
+      \subheader{Sr Software Engineer, Netflix}\hfill Jul 2018 $-$ Present\\
       \vspace{-4 pt}
       \begin{itemize}
-            \item Building and maintaining the control plane for container platform at Netflix using mesos/kubernetes on Amazon EC2.
-            \item Designed and built the titus job activity history service which showed the event history for a job(creation/modification aka scaling/deletion)
-            \item Built a docker image metadata cache from the docker registry
+          \item Singularly responsible to keep a pulse on key customers/partners and communicate these product needs and relationship health to both product management and EM leadership.
+          \item Handled first level five minute on-call supporting all Netflix businesses
+          \item Design and development of the Control plane for container platform at Netflix. (Titus-Mesos/kubernetes on Amazon EC2)
+          \item Delivered a job activity history service for audit and analysis of job scaling activity.
+          \item Built a docker image metadata cache from the docker registry
         %\item  Data platform experience
         %    \item Worked on federated graphql API
       \end{itemize}
   
       \item
-      \subheader{Mesosphere}, San Francisco, CA\hfill Sept 2016 $-$ Jul 2018\\
-      Software Developer, Cluster operations
+      \subheader{Software Engineer, Mesosphere}\hfill Sept 2016 $-$ Jul 2018\\
       \vspace{-4 pt}
       \begin{itemize}
-        \item Worked on making container orchestration cluster upgrades seamless.
-	    \item Worked on building DC/OS(Mesos) services such as cluster and node checks and dcos licensing.
+        \item Improved the cluster upgrade operation experience for customers.
+	    \item Built DC/OS(Mesos) services such as cluster and node checks and dcos licensing.
       \end{itemize}
       
     \item	
-      \subheader{Amazon Web Services}, Cupertino, CA\hfill Aug 2013 $-$ Aug 2016\\
-      Software Developer, EC2
+      \subheader{Software Engineer, Amazon Web Services}\hfill Aug 2013 $-$ Aug 2016\\
       \vspace{-4 pt}
       \begin{itemize}
         \item Added support for new linux kernels for the EC2 VM Import/Export service.
@@ -84,8 +95,7 @@
       \end{itemize} 
 
     \item
-      \subheader{Cisco Systems Inc}, San Jose, CA\hfill Jul 2010 $-$ Aug 2013\\
-      Software Developer
+      \subheader{Software Engineer, Cisco Systems Inc}\hfill Jul 2010 $-$ Aug 2013\\
       \vspace{-4 pt}
       \begin{itemize}
         % \item Added mux buffers to linecards, for multiplexing traffic between redundant supervisors.
